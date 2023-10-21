@@ -1,0 +1,133 @@
+
+.main-header-container{
+    position: relative;
+    img#logo{
+        padding-top: 75px;
+        display: block;
+        flex-grow: 2;
+    }
+
+    .main-headar-content{
+       display: flex;
+       justify-content: space-between; 
+       align-items: center;
+       margin: 28px 0 172px;
+       .textHeader-content{
+        max-width: 564px;
+        h1{
+            margin-bottom: 35px;
+        }
+       }
+
+       .bmiCalc-content{
+        max-width: 564px;
+        padding: 32px;
+        background: $white1;
+        border-radius: 16px;
+        
+        .measureRadio-content{
+            margin: 32px 0 32px;
+            display: flex;
+            
+            gap: 24px;
+            .radio{
+              width: 100%;  
+              display: flex;
+              align-items: center;
+            //   input[type=radio]{
+            //     margin-right: 18px;
+            //     width: 31px;
+            //     height: 31px;
+            //     outline: none;
+            //     border: none;
+            //   }
+            input[type=radio]{
+                display: none;
+                &+label{
+                   position: relative;
+                   padding-left: 49px;
+                }
+
+                &+label:before{
+                    content: "";
+                    position: absolute;
+                    width: 31px;
+                    height: 31px;
+                    border-radius: 100%;
+                    border: 1px solid $color4;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+
+                }
+
+                &:checked+label:before{
+                    background-color: $color1;
+                    width: 15px;
+                    height: 15px;
+                    border: 8px solid $color4;
+                }
+            }
+            }
+        }
+
+        .measureInput-content{
+            margin-bottom: 32px;
+            display: flex;
+            gap:24px ;
+            label, input{
+                width: 100%;
+            }
+            label{
+                position: relative;
+                input{
+                    margin-top: 8px;
+                    border: 1px solid $color4;
+                    border-radius: 8px;
+                    padding: 20px 24px;
+                    @include fontStyle(1.5rem,600,110%);
+                    
+                &::placeholder{
+                    color: $color4;
+                }
+
+                &:focus{
+                    border: 1px solid $color1;
+                }
+                }
+                h3{
+                    position: absolute;
+                    right:24px;
+                    top: 50%;
+                    color: $color1;
+                    @include fontStyle(1.5rem,600,110%);
+                }
+            }  
+        }
+
+        .bmiResult-content{
+            h3{
+                color: $white1;
+            }
+            padding: 32px;
+            background: linear-gradient(to right, #345FF6, #587DFF );
+            color: $white1;
+            border-radius: 32px 999px 999px 32px;
+        }
+       }
+    }
+
+    &::before{
+        z-index: -1;
+        content: "";
+        position: absolute;
+        background: linear-gradient(-45deg, #D6E6FE,#d6fcfe00 );
+        width: 978px;
+        height: 737px;
+        border-radius: 0 0 35px 35px;
+        top: 0;
+        left: -116px;
+
+    }
+}

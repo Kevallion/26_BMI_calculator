@@ -1,0 +1,330 @@
+/*********** COLOR **********/
+/********** FONT ***********/
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+/******* GENERAL PARAMETER *********/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+input[type=number] {
+  border: none;
+  outline: none;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+  font-family: Inter, sans-serif;
+  color: #5E6E85;
+}
+
+.wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.bold {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+h1, h2, h3, h4 {
+  color: #253347;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.main-header-container {
+  position: relative;
+}
+.main-header-container img#logo {
+  padding-top: 75px;
+  display: block;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+.main-header-container .main-headar-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 28px 0 172px;
+}
+.main-header-container .main-headar-content .textHeader-content {
+  max-width: 564px;
+}
+.main-header-container .main-headar-content .textHeader-content h1 {
+  margin-bottom: 35px;
+}
+.main-header-container .main-headar-content .bmiCalc-content {
+  max-width: 564px;
+  padding: 32px;
+  background: #fff;
+  border-radius: 16px;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureRadio-content {
+  margin: 32px 0 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureRadio-content .radio {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureRadio-content .radio input[type=radio] {
+  display: none;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureRadio-content .radio input[type=radio] + label {
+  position: relative;
+  padding-left: 49px;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureRadio-content .radio input[type=radio] + label:before {
+  content: "";
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  border-radius: 100%;
+  border: 1px solid #D8E2E7;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureRadio-content .radio input[type=radio]:checked + label:before {
+  background-color: #345FF6;
+  width: 15px;
+  height: 15px;
+  border: 8px solid #D8E2E7;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureInput-content {
+  margin-bottom: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureInput-content label, .main-header-container .main-headar-content .bmiCalc-content .measureInput-content input {
+  width: 100%;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureInput-content label {
+  position: relative;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureInput-content label input {
+  margin-top: 8px;
+  border: 1px solid #D8E2E7;
+  border-radius: 8px;
+  padding: 20px 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 110%;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureInput-content label input::-webkit-input-placeholder {
+  color: #D8E2E7;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureInput-content label input::-moz-placeholder {
+  color: #D8E2E7;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureInput-content label input:-ms-input-placeholder {
+  color: #D8E2E7;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureInput-content label input::-ms-input-placeholder {
+  color: #D8E2E7;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureInput-content label input::placeholder {
+  color: #D8E2E7;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureInput-content label input:focus {
+  border: 1px solid #345FF6;
+}
+.main-header-container .main-headar-content .bmiCalc-content .measureInput-content label h3 {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  color: #345FF6;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 110%;
+}
+.main-header-container .main-headar-content .bmiCalc-content .bmiResult-content {
+  padding: 32px;
+  background: -webkit-gradient(linear, left top, right top, from(#345FF6), to(#587DFF));
+  background: linear-gradient(to right, #345FF6, #587DFF);
+  color: #fff;
+  border-radius: 32px 999px 999px 32px;
+}
+.main-header-container .main-headar-content .bmiCalc-content .bmiResult-content h3 {
+  color: #fff;
+}
+.main-header-container::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  background: linear-gradient(-45deg, #D6E6FE, rgba(214, 252, 254, 0));
+  width: 978px;
+  height: 737px;
+  border-radius: 0 0 35px 35px;
+  top: 0;
+  left: -116px;
+}
+
+.section-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 131px;
+  width: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.section-1 img {
+  width: 564px;
+}
+.section-1 .text-content {
+  width: 465px;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+.section-1 .text-content h2 {
+  margin-bottom: 35px;
+}
+
+.section-2 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 168px 0 216px;
+}
+.section-2 ul li {
+  width: 365px;
+  min-height: 234px;
+}
+.section-2 ul li img {
+  width: 64px;
+}
+.section-2 ul li h3 {
+  margin: 45px 0 24px;
+}
+
+footer {
+  position: relative;
+}
+footer .text-content {
+  width: 564px;
+}
+footer .text-content h2 {
+  margin-bottom: 35px;
+}
+footer .ul-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+footer .ul-container .classification-list {
+  display: grid;
+  gap: 32px;
+  grid-template-areas: ". gender" "age muscle" "pregency race";
+}
+footer .ul-container .card {
+  width: 365px;
+  justify-self: end;
+  padding: 32px;
+  -webkit-box-shadow: 16px 56px 32px 0 rgba(143, 174, 207, 0.262745098);
+          box-shadow: 16px 56px 32px 0 rgba(143, 174, 207, 0.262745098);
+  border-radius: 16px;
+}
+footer .ul-container .card img {
+  margin-right: 16px;
+}
+footer .ul-container .card .header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+}
+footer .ul-container #gender {
+  position: relative;
+  grid-area: gender;
+  right: 99px;
+}
+footer .ul-container #age {
+  position: relative;
+  grid-area: age;
+}
+footer .ul-container #muscle {
+  position: relative;
+  grid-area: muscle;
+}
+footer .ul-container #pregency {
+  position: relative;
+  grid-area: pregency;
+  right: 199px;
+}
+footer .ul-container #race {
+  position: relative;
+  grid-area: race;
+  right: 199px;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,72 @@
+/*********** COLOR **********/
+$color1:#345FF6;
+$color2:#253347;
+$color3:#5E6E85;
+$color4:#D8E2E7;
+$white1:#fff;
+
+/********** FONT ***********/
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+$font1: Inter, sans-serif;
+
+/******* GENERAL PARAMETER *********/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+input[type="number"]{
+    border: none;
+    outline: none;
+    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
+        appearance: none;
+    }
+} 
+
+@mixin fontStyle($fontSize, $fontWeight, $lineHeight){
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+}
+
+body{
+    @include fontStyle(1rem,400,150%);
+    font-family: $font1;
+    color: $color3;
+}
+
+.wrapper{
+    max-width:1160px;
+    margin: 0 auto;
+}
+
+.bold{
+    @include fontStyle(1rem,600,150%);
+}
+h1, h2, h3, h4{
+    color: $color2;
+}
+h1{
+    @include fontStyle(4rem,600,110%);
+}
+h2{
+    @include fontStyle(3rem,600,110%);
+}
+h3{
+    @include fontStyle(1.5rem,600,110%);
+}
+h4{
+    @include fontStyle(1.25rem,600,110%);
+}
+
+img{
+    object-fit: contain;
+}

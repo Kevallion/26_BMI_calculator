@@ -1,0 +1,37 @@
+.section-1{
+    display: flex;
+    gap:131px ;
+    width: 100%;
+    align-items: flex-end;
+    img{
+            width: 564px;
+        }
+    
+    .text-content{
+        width: 465px;
+        display: inline-block;
+        margin-bottom: 40px;
+        h2{
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.section-2{
+    
+    ul{
+        display: flex;
+        justify-content: space-between;
+        margin: 168px 0 216px;
+        li{
+            img{
+                width: 64px;
+            }
+            h3{
+                margin: 45px 0 24px;
+            }
+            width: 365px;
+            min-height: 234px;
+        }
+    }
+}

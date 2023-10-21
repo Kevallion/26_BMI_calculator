@@ -1,0 +1,64 @@
+footer{
+    position: relative;
+    .text-content{
+        width: 564px;
+        h2{
+            margin-bottom:35px;
+        }
+    }
+
+    .ul-container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        .classification-list{
+            
+            display: grid;
+            gap: 32px;;
+            grid-template-areas: ". gender"
+            "age muscle"
+            "pregency race";
+            
+        }
+
+        .card{
+            width:365px ;
+            justify-self: end;
+            padding: 32px;
+            box-shadow: 16px 56px 32px 0 #8faecf43;
+            border-radius: 16px;
+            img{
+                margin-right: 16px;
+            }
+            .header-content{
+                display: flex;
+                align-items: center;
+                margin-bottom: 16px;
+            }
+        }
+        #gender{
+            position: relative;
+            grid-area: gender;
+            right: 99px;
+        }
+        #age{
+            position: relative;
+            grid-area: age;
+
+        }
+        #muscle{
+            position: relative;
+            grid-area: muscle;
+        }
+        #pregency{
+            position: relative;
+            grid-area: pregency;
+            right: 199px;
+        }
+        #race{
+            position: relative;
+            grid-area:race;
+            right: 199px;
+        }
+    }
+}
